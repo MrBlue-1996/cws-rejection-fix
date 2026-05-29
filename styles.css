@@ -248,6 +248,36 @@ h3 {
   padding: 18px;
 }
 
+.panel > svg {
+  color: var(--accent);
+}
+
+.plain-list {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.plain-list li {
+  position: relative;
+  padding-left: 24px;
+  color: var(--muted);
+}
+
+.plain-list li::before {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 14px;
+  height: 14px;
+  border: 1px solid rgba(18, 106, 91, 0.32);
+  border-radius: 999px;
+  background: rgba(18, 106, 91, 0.08);
+  content: "";
+}
+
 .input-panel {
   display: grid;
   grid-template-rows: auto auto minmax(260px, 1fr) auto minmax(120px, 0.45fr) auto;

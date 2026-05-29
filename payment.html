@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stripe and PayPal Webhook Triage</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="payment.html">
+        <span class="brand-mark">PAY</span>
+        <span>Webhook Triage</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">CWS triage</a>
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="mailto:rwestgate602@gmail.com?subject=Payment%20webhook%20triage">Contact</a>
+      </nav>
+    </header>
+
+    <section class="intro" id="top">
+      <div class="intro-copy">
+        <p class="eyebrow">Stripe / PayPal webhook triage</p>
+        <h1>Fix payment state bugs without sharing secrets.</h1>
+        <p class="subhead">For checkout flows where webhooks do not fire, signatures fail, paid users are not updated, or retries can double-apply side effects.</p>
+      </div>
+      <div class="intro-actions">
+        <a class="contact" href="mailto:rwestgate602@gmail.com?subject=Payment%20webhook%20triage">
+          <i data-lucide="mail"></i>
+          Send issue
+        </a>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Service trust details">
+      <div>
+        <strong>Public-code first</strong>
+        <span>I work from repo code, redacted logs, and issue context</span>
+      </div>
+      <div>
+        <strong>No credentials</strong>
+        <span>No Stripe, PayPal, Vercel, or server login needed upfront</span>
+      </div>
+      <div>
+        <strong>Actionable first</strong>
+        <span>Payment only after I confirm a concrete fix path</span>
+      </div>
+    </section>
+
+    <section class="review-note" aria-label="Payment webhook triage scope">
+      <div>
+        <p class="eyebrow">Good fit</p>
+        <h2>Real payment state issues, not generic setup advice.</h2>
+      </div>
+      <p>Best cases: missing webhook events, wrong endpoint paths, raw-body signature failures, duplicate Stripe retries, PayPal return/webhook races, or subscription status drift.</p>
+      <a href="mailto:rwestgate602@gmail.com?subject=Payment%20webhook%20triage">Send context</a>
+    </section>
+
+    <section class="steps" id="how">
+      <article>
+        <span>1</span>
+        <h3>Send context</h3>
+        <p>Share the public issue, repo link, redacted logs, and expected payment state.</p>
+      </article>
+      <article>
+        <span>2</span>
+        <h3>Actionable check</h3>
+        <p>I confirm whether the root cause is code, config, webhook delivery, or test coverage.</p>
+      </article>
+      <article>
+        <span>3</span>
+        <h3>Fixed scope</h3>
+        <p>You get a concise scope: route fix, patch plan, public-code PR, or dashboard checklist.</p>
+      </article>
+      <article>
+        <span>4</span>
+        <h3>Verify safely</h3>
+        <p>You run the provider test event or sandbox payment. I do not need live keys.</p>
+      </article>
+    </section>
+
+    <section class="workspace">
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Send me</p>
+            <h2>Minimum context</h2>
+          </div>
+          <i data-lucide="clipboard-list"></i>
+        </div>
+        <ul class="plain-list">
+          <li>Public issue or repo link</li>
+          <li>Provider: Stripe, PayPal, Mollie, or other</li>
+          <li>Webhook endpoint path and framework</li>
+          <li>One redacted failure log or expected state transition</li>
+          <li>Whether you want diagnosis, tests, or a patch</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">You get</p>
+            <h2>Concrete output</h2>
+          </div>
+          <i data-lucide="check-circle-2"></i>
+        </div>
+        <ul class="plain-list">
+          <li>Likely root cause and exact affected files</li>
+          <li>Provider-specific verification checklist</li>
+          <li>Patch-style code guidance or a small PR</li>
+          <li>Replay/idempotency test plan</li>
+          <li>Short note you can paste into the issue or PR</li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <article class="tier">
+        <span class="price">$49</span>
+        <h3>Config/path check</h3>
+        <p>Endpoint, event list, webhook secret, and one safe test path.</p>
+      </article>
+      <article class="tier">
+        <span class="price">$79</span>
+        <h3>Focused diagnosis</h3>
+        <p>Root cause, affected files, minimal fix, and verification plan.</p>
+      </article>
+      <article class="tier">
+        <span class="price">$149</span>
+        <h3>Patch package</h3>
+        <p>Small public-code PR or patch plan with tests and provider checklist.</p>
+      </article>
+    </section>
+
+    <section class="order" id="order">
+      <div>
+        <h2>Have a payment bug open?</h2>
+        <p>Email the public issue and redacted context first. I confirm whether it is actionable before payment.</p>
+      </div>
+      <a class="contact primary" href="mailto:rwestgate602@gmail.com?subject=Payment%20webhook%20triage">
+        <i data-lucide="mail"></i>
+        Send issue
+      </a>
+    </section>
+  </main>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      if (window.lucide) window.lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
