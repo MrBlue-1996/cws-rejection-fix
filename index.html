@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chrome Web Store Rejection Triage</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="#">
+        <span class="brand-mark">CWS</span>
+        <span>Rejection Fix</span>
+      </a>
+      <nav class="nav">
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="mailto:rwestgate602@gmail.com?subject=Chrome%20Web%20Store%20rejection%20fix">Contact</a>
+      </nav>
+    </header>
+
+    <section class="intro" id="top">
+      <div class="intro-copy">
+        <p class="eyebrow">Chrome Web Store rejection triage</p>
+        <h1>Find the permission or privacy issue before another resubmit.</h1>
+        <p class="subhead">Paste your manifest and reviewer note. The free scan shows likely review triggers. The full fix is reviewed manually.</p>
+      </div>
+      <div class="intro-actions">
+        <a class="contact" href="#tool">
+          <i data-lucide="scan-line"></i>
+          Run triage
+        </a>
+        <a class="contact ghost" href="mailto:rwestgate602@gmail.com?subject=Chrome%20Web%20Store%20rejection%20fix">
+          <i data-lucide="mail"></i>
+          Send rejection
+        </a>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Service trust details">
+      <div>
+        <strong>CWS Rejection Fix</strong>
+        <span>Independent MV3 rejection triage</span>
+      </div>
+      <div>
+        <strong>No approval guarantee</strong>
+        <span>Only compliant fixes, no policy bypass</span>
+      </div>
+      <div>
+        <strong>Actionable first</strong>
+        <span>Payment only after I confirm there is a fix path</span>
+      </div>
+    </section>
+
+    <section class="steps" id="how">
+      <article>
+        <span>1</span>
+        <h3>Send context</h3>
+        <p>Share the rejection text and manifest. No passwords, no store access.</p>
+      </article>
+      <article>
+        <span>2</span>
+        <h3>Actionable check</h3>
+        <p>I confirm whether there is a realistic fix path before payment.</p>
+      </article>
+      <article>
+        <span>3</span>
+        <h3>Manual triage</h3>
+        <p>You get exact manifest/listing/privacy changes and a reviewer note.</p>
+      </article>
+      <article>
+        <span>4</span>
+        <h3>Resubmit cleanly</h3>
+        <p>You apply the changes and resubmit. No approval guarantee.</p>
+      </article>
+    </section>
+
+    <section class="workspace" id="tool">
+      <form class="panel input-panel" id="triage-form">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Input</p>
+            <h2>Reviewer context</h2>
+          </div>
+          <button type="button" class="icon-button" id="load-demo" aria-label="Load demo">
+            <i data-lucide="file-input"></i>
+          </button>
+        </div>
+
+        <label for="manifest">manifest.json</label>
+        <textarea id="manifest" spellcheck="false" placeholder='{"manifest_version": 3, "permissions": ["tabs", "scripting"]}'></textarea>
+
+        <label for="rejection">Rejection email or reviewer note</label>
+        <textarea id="rejection" spellcheck="false" placeholder="Paste the Chrome Web Store rejection text here"></textarea>
+
+        <div class="actions">
+          <button type="submit">
+            <i data-lucide="play"></i>
+            Run triage
+          </button>
+        </div>
+      </form>
+
+      <section class="panel result-panel">
+        <div class="result-head">
+          <div>
+            <p class="eyebrow">Quick report</p>
+            <h2 id="score">Waiting for input</h2>
+          </div>
+          <span class="badge" id="risk-badge">No scan</span>
+        </div>
+
+        <div class="summary-line" id="summary-line">No report yet.</div>
+
+        <div id="issues" class="issues empty">
+          Paste a manifest and run triage.
+        </div>
+
+        <div class="locked">
+          <div>
+            <h3>Full triage includes</h3>
+            <p>Exact policy match, permission-by-permission decision, manifest changes, privacy text, and a reviewer note.</p>
+          </div>
+          <div>
+            <h3>Why manual review matters</h3>
+            <p>The same permission can be valid or excessive depending on code usage, user action, and store listing copy.</p>
+          </div>
+        </div>
+
+        <button type="button" class="secondary copy-button" id="copy-report">
+          <i data-lucide="copy"></i>
+          Copy report
+        </button>
+      </section>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <article class="tier">
+        <span class="price">$29</span>
+        <h3>Rejection triage</h3>
+        <p>Exact rejection cause, concrete manifest/listing/privacy changes, and a reviewer note.</p>
+      </article>
+      <article class="tier">
+        <span class="price">$79</span>
+        <h3>Permission rewrite</h3>
+        <p>Patch-style guidance for `tabs`, `activeTab`, `scripting`, and host access.</p>
+      </article>
+      <article class="tier">
+        <span class="price">$149</span>
+        <h3>Resubmission pack</h3>
+        <p>Triage, rewritten privacy text, listing edits, and resubmission wording.</p>
+      </article>
+    </section>
+
+    <section class="order" id="order">
+      <div>
+        <h2>Need the actual fix?</h2>
+        <p>Email the rejection text and manifest first. I confirm whether it is actionable before payment.</p>
+      </div>
+      <a class="contact primary" href="mailto:rwestgate602@gmail.com?subject=Chrome%20Web%20Store%20rejection%20fix">
+        <i data-lucide="mail"></i>
+        Send rejection
+      </a>
+    </section>
+  </main>
+</body>
+</html>
