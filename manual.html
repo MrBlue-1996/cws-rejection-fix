@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manual Patch PR Triage</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="manual.html">
+        <span class="brand-mark">PR</span>
+        <span>Manual Patch PR</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">CWS triage</a>
+        <a href="payment.html">Payment triage</a>
+        <a href="#pricing">Pricing</a>
+        <a href="mailto:rwestgate602@gmail.com?subject=Manual%20patch%20PR">Contact</a>
+      </nav>
+    </header>
+
+    <section class="intro" id="top">
+      <div class="intro-copy">
+        <p class="eyebrow">Agent patch recovery</p>
+        <h1>Turn a generated patch into a clean PR.</h1>
+        <p class="subhead">For Repo Assist, Copilot, Codex, or CI runs that produced a patch but could not push because of workflow permissions, protected files, or conflicts.</p>
+      </div>
+      <div class="intro-actions">
+        <a class="contact" href="mailto:rwestgate602@gmail.com?subject=Manual%20patch%20PR">
+          <i data-lucide="mail"></i>
+          Send run
+        </a>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Manual PR trust details">
+      <div>
+        <strong>Public repo only</strong>
+        <span>I work from the issue, workflow run, and patch artifact</span>
+      </div>
+      <div>
+        <strong>No admin access</strong>
+        <span>Fork PRs are enough for most cases</span>
+      </div>
+      <div>
+        <strong>Paid after scope</strong>
+        <span>I confirm the patch is recoverable before payment</span>
+      </div>
+    </section>
+
+    <section class="review-note" aria-label="Manual patch PR scope">
+      <div>
+        <p class="eyebrow">Good fit</p>
+        <h2>The patch exists, but the PR did not land.</h2>
+      </div>
+      <p>Best cases: protected workflow files, missing workflow-scope token, generated dependency updates, conflict refreshes, or an agent artifact that needs to be applied by hand.</p>
+      <a href="mailto:rwestgate602@gmail.com?subject=Manual%20patch%20PR">Send run link</a>
+    </section>
+
+    <section class="steps" id="how">
+      <article>
+        <span>1</span>
+        <h3>Send run</h3>
+        <p>Share the issue, workflow run, patch artifact, and target base branch.</p>
+      </article>
+      <article>
+        <span>2</span>
+        <h3>Recover patch</h3>
+        <p>I apply the artifact locally or refresh it against current main.</p>
+      </article>
+      <article>
+        <span>3</span>
+        <h3>Open PR</h3>
+        <p>You get a fork PR, short summary, and exact validation notes.</p>
+      </article>
+      <article>
+        <span>4</span>
+        <h3>Keep it small</h3>
+        <p>No unrelated refactors. If it is not clean, I say so before payment.</p>
+      </article>
+    </section>
+
+    <section class="workspace">
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Send me</p>
+            <h2>Minimum context</h2>
+          </div>
+          <i data-lucide="clipboard-list"></i>
+        </div>
+        <ul class="plain-list">
+          <li>GitHub issue or PR link</li>
+          <li>Failed workflow run link</li>
+          <li>Patch artifact name, if known</li>
+          <li>Target branch and expected PR title</li>
+          <li>Required test command from the issue</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">You get</p>
+            <h2>Clean handoff</h2>
+          </div>
+          <i data-lucide="git-pull-request"></i>
+        </div>
+        <ul class="plain-list">
+          <li>Fork PR or exact blocked reason</li>
+          <li>Patch application notes</li>
+          <li>Validation command output summary</li>
+          <li>Short PR body without AI-style padding</li>
+          <li>No credentials or admin access requested</li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <article class="tier">
+        <span class="price">$29</span>
+        <h3>Manual PR</h3>
+        <p>Apply a clean generated patch and open a fork PR.</p>
+      </article>
+      <article class="tier">
+        <span class="price">$49</span>
+        <h3>Conflict refresh</h3>
+        <p>Refresh a stale patch against current main and note the conflicts.</p>
+      </article>
+      <article class="tier">
+        <span class="price">$79</span>
+        <h3>PR plus tests</h3>
+        <p>Patch recovery, focused test run, and concise validation note.</p>
+      </article>
+    </section>
+
+    <section class="order" id="order">
+      <div>
+        <h2>Have a stuck agent patch?</h2>
+        <p>Email the run link first. I confirm whether it is recoverable before payment.</p>
+      </div>
+      <a class="contact primary" href="mailto:rwestgate602@gmail.com?subject=Manual%20patch%20PR">
+        <i data-lucide="mail"></i>
+        Send run
+      </a>
+    </section>
+  </main>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      if (window.lucide) window.lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
