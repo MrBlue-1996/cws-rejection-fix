@@ -278,6 +278,17 @@ h3 {
   content: "";
 }
 
+.proof-list a {
+  color: var(--text);
+  font-weight: 700;
+  text-decoration-color: rgba(18, 106, 91, 0.35);
+  text-underline-offset: 3px;
+}
+
+.proof-list a:hover {
+  color: var(--accent);
+}
+
 .input-panel {
   display: grid;
   grid-template-rows: auto auto minmax(260px, 1fr) auto minmax(120px, 0.45fr) auto;
