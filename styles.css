@@ -41,6 +41,7 @@ body {
 .workspace,
 .pricing,
 .trust-strip,
+.review-note,
 .steps,
 .order {
   display: grid;
@@ -127,6 +128,32 @@ body {
 .trust-strip span {
   color: var(--muted);
   font-size: 13px;
+}
+
+.review-note {
+  grid-template-columns: minmax(220px, 0.7fr) minmax(300px, 1.1fr) auto;
+  align-items: center;
+  margin-bottom: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.review-note p:not(.eyebrow) {
+  color: var(--muted);
+}
+
+.review-note a {
+  color: var(--accent);
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.review-note a:hover {
+  color: var(--accent-strong);
 }
 
 .steps {
@@ -449,6 +476,7 @@ svg {
   .pricing,
   .locked,
   .trust-strip,
+  .review-note,
   .steps {
     grid-template-columns: 1fr;
   }
@@ -468,6 +496,10 @@ svg {
 
   .steps {
     gap: 12px;
+  }
+
+  .review-note a {
+    white-space: normal;
   }
 }
 
@@ -497,5 +529,9 @@ svg {
   .intro-actions,
   .order {
     flex-direction: column;
+  }
+
+  .review-note {
+    padding: 14px;
   }
 }
